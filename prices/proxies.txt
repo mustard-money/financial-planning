@@ -1,0 +1,44 @@
+# The funds a scenario backtest uses in place of investments that don't name
+# a ticker: index ETFs, and the older index mutual funds that supply the years
+# before each ETF existed. The ETFs are in the symbol directory already; the
+# mutual funds aren't listed on an exchange, so they have to be asked for:
+#
+#   bin/prices -symbols prices/proxies.txt
+#
+# Kept in step with the table in scenario/holdings.go by a test.
+
+# US large-company stocks (S&P 500)
+SPY
+VFINX
+# The whole US stock market
+VTI
+VTSMX
+# The Nasdaq-100
+QQQ
+# US small-company stocks
+IWM
+NAESX
+# Stocks outside the US: developed and emerging markets
+EFA
+VGTSX
+EEM
+VEIEX
+# A 60/40 mix of stocks and bonds
+AOR
+VBINX
+# Bonds: US investment grade, Treasuries, inflation-protected, municipal
+AGG
+VBMFX
+IEF
+VFITX
+TIP
+VIPSX
+MUB
+VWITX
+# Real estate and gold
+VNQ
+VGSIX
+GLD
+# Cash and short-term deposits
+BIL
+SHV

@@ -1,0 +1,14 @@
+# Binaries
+/bin/
+/financial-planning
+*.exe
+*.test
+*.out
+
+# Downloaded prices
+/data/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

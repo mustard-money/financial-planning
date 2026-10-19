@@ -1,0 +1,35 @@
+{
+  "name": "Example household",
+  "asOf": "2026-10",
+  "income": [
+    { "name": "Salary", "amount": 6500, "frequency": "semimonthly", "taxRate": 0.28, "endYear": 2041 },
+    { "name": "Consulting", "amount": 4000, "frequency": "quarterly", "taxRate": 0.3, "endYear": 2031 },
+    { "name": "Social Security", "amount": 3200, "frequency": "monthly", "taxRate": 0.1, "startYear": 2046 }
+  ],
+  "expenses": [
+    { "name": "Living costs", "amount": 7500, "frequency": "monthly" },
+    { "name": "Travel", "amount": 9000, "frequency": "yearly" },
+    { "name": "Car loan", "amount": 620, "frequency": "monthly", "indexation": "none", "endYear": 2029, "endMonth": 6 }
+  ],
+  "securities": [
+    { "name": "US stocks", "symbol": "VTI", "proxy": "VFINX", "value": 420000 },
+    { "name": "US bonds", "symbol": "BND", "proxy": "VBMFX", "value": 150000 },
+    { "name": "Savings", "series": "cash", "value": 40000 }
+  ],
+  "realEstate": [
+    {
+      "name": "Rental duplex",
+      "value": 650000,
+      "monthlyRent": 4300,
+      "vacancyRate": 0.05,
+      "managementFeeRate": 0.08,
+      "annualCostRate": 0.022,
+      "mortgage": { "balance": 380000, "rate": 0.0475, "remainingMonths": 312 }
+    }
+  ],
+  "policy": {
+    "rebalance": "yearly",
+    "targetWeights": { "US stocks": 0.7, "US bonds": 0.25, "Savings": 0.05 },
+    "withdrawalOrder": ["Savings"]
+  }
+}

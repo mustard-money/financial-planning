@@ -1,0 +1,34 @@
+{
+  "taxRate": 0.27,
+  "profile": { "expectedReturn": 0.07 },
+  "scenario": {
+    "id": "house-2028",
+    "name": "Buy a house in 2028",
+    "itemIds": ["salary", "partner", "living", "travel", "brokerage", "tech", "roth", "bonds", "savings", "cds"],
+    "events": [
+      { "id": "ev1", "kind": "oneTimeIncome", "name": "RSU sale", "year": 1, "amount": 40000 },
+      { "id": "ev2", "kind": "oneTimeCost", "name": "Down payment", "year": 2, "amount": 150000 },
+      { "id": "ev3", "kind": "incomePause", "name": "Parental leave", "year": 3, "amount": 0, "months": 6 },
+      { "id": "ev4", "kind": "recurringCost", "name": "Childcare", "year": 4, "amount": 30000, "years": 5 }
+    ],
+    "parameters": { "years": 20, "returnRate": 0.07, "inflation": 0.03, "incomeGrowth": 0.03, "incomeAdjustment": 0, "expenseAdjustment": 0 }
+  },
+  "items": [
+    {
+      "id": "salary", "category": "income", "name": "Salary", "amount": 9000, "frequency": "semimonthly", "incomeType": "w2",
+      "benefits": { "retirement": { "contributionRate": 0.1, "roth": false, "matchRate": 0.5, "matchUpTo": 0.06, "balance": { "amount": 180000 } } }
+    },
+    { "id": "partner", "category": "income", "name": "Partner's salary", "amount": 6500, "frequency": "monthly", "incomeType": "w2" },
+    { "id": "living", "category": "expenses", "name": "Living costs", "amount": 11500, "frequency": "monthly" },
+    { "id": "travel", "category": "expenses", "name": "Travel", "amount": 12000, "frequency": "yearly" },
+    { "id": "brokerage", "category": "investments", "name": "Brokerage", "amount": 250000, "account": "taxable", "ticker": "VTI" },
+    { "id": "tech", "category": "investments", "name": "Tech fund", "amount": 60000, "account": "taxable", "ticker": "QQQ" },
+    { "id": "roth", "category": "investments", "name": "Roth IRA", "amount": 90000, "account": "rothIra" },
+    {
+      "id": "bonds", "category": "investments", "name": "Bond index fund", "amount": 80000, "account": "traditionalIra",
+      "withdrawalStartYear": 2041, "withdrawalRate": 0.04
+    },
+    { "id": "savings", "category": "investments", "name": "Savings", "amount": 45000, "account": "bank" },
+    { "id": "cds", "category": "investments", "name": "CD ladder", "amount": 30000, "account": "cd", "asOfYear": 2025, "asOfMonth": 6 }
+  ]
+}

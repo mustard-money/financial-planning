@@ -1,0 +1,10 @@
+.git
+.idea
+.junie
+.vscode
+.DS_Store
+bin
+data
+*.test
+*.out
+prices.db
